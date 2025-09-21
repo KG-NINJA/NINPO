@@ -3,6 +3,19 @@ A minimal workflow to use Codex CLI with safe checkpoints.
 #KGNINJA  
 https://buymeacoffee.com/kgninja  
 
+## License
+
+This project uses the **MIT License**.  
+All source files under `src/` include a license header automatically added by the `nin` workflow.
+
+---
+
+## Progress
+
+- Integrated Codex CLI with `ninpo` minimal workflow  
+- Successfully applied MIT license headers across multiple files  
+- Safe and reproducible checkpoints with `nin` / `und` commands  
+
 ## Installation
 
 ```bash
