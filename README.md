@@ -1,5 +1,7 @@
 # NINPO
 A minimal workflow to use Codex CLI with safe checkpoints.
+#KGNINJA
+https://buymeacoffee.com/kgninja
 
 ## Installation
 
@@ -30,5 +32,4 @@ For cleanup, squash snapshot commits with git rebase -i if needed.
 
 Simple, safe, repeatable.
 
-#KGNINJA
-https://buymeacoffee.com/kgninja
+
