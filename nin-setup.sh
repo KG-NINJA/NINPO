@@ -4,12 +4,16 @@
 undo() { git reset --hard HEAD; }
 und()  { undo; }
 
-# nin = auto snapshot + Codex CLI edit
+# ninja = auto snapshot + Codex CLI edit
 ninja() {
-  target=${1:-src/}
+  file=$1
   shift
+  if [ -z "$file" ]; then
+    echo "Usage: ninja <file> \"<prompt>\""
+    return 1
+  fi
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
-  codex edit "$target" --recursive --diff "$@"
+  codex edit "$file" --diff -- "$@"
 }
 nin() { ninja "$@"; }
