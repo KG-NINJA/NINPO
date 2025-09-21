@@ -14,6 +14,7 @@ ninja() {
   fi
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
-  codex edit "$file" --diff -- "$@"
+  # Run codex with prompt first, then file path
+  codex --diff "$@" < "$file" > "$file.tmp" && mv "$file.tmp" "$file"
 }
 nin() { ninja "$@"; }
