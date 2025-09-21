@@ -14,6 +14,7 @@ ninja() {
   fi
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
-  codex "$@" --file "$file" --diff
+  # ファイル内容を標準入力に渡して出力で上書き
+  codex "$@" < "$file" > "$file.tmp" && mv "$file.tmp" "$file"
 }
 nin() { ninja "$@"; }
