@@ -6,13 +6,29 @@ https://buymeacoffee.com/kgninja
 ## Installation
 
 ```bash
-curl -s https://raw.githubusercontent.com/KG-NINJA/ninpo/main/nin-setup.sh -o ~/nin-setup.sh
+curl -s https://raw.githubusercontent.com/KG-NINJA/NINPO/main/nin-setup.sh -o ~/nin-setup.sh
 echo "source ~/nin-setup.sh" >> ~/.bashrc
 source ~/.bashrc
 Usage
-nin <dir|file>
-Create a Git snapshot automatically and start Codex CLI edit with --recursive --diff.
+Single file
 
+bash
+Copy code
+nin app.py add a comment line at the top
+Multiple files
+
+bash
+Copy code
+nin app.py utils.py refactor print to logging
+Directory
+
+bash
+Copy code
+nin src/ add license header to each file
+Undo
+
+bash
+Copy code
 und
 Restore to the previous Git snapshot.
 
