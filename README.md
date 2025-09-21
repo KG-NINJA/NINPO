@@ -1,7 +1,7 @@
 # NINPO
-A minimal workflow to use Codex CLI with safe checkpoints.
-#KGNINJA
-https://buymeacoffee.com/kgninja
+A minimal workflow to use Codex CLI with safe checkpoints.  
+#KGNINJA  
+https://buymeacoffee.com/kgninja  
 
 ## Installation
 
@@ -29,7 +29,4 @@ Each nin command makes a Git commit named snapshot before nin edit.
 Use und to reset to the last snapshot instantly.
 
 For cleanup, squash snapshot commits with git rebase -i if needed.
-
-Simple, safe, repeatable.
-
 
