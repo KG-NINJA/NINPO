@@ -1,10 +1,10 @@
 # nin/und workflow setup
 
-# one step back
+# step back
 undo() { git reset --hard HEAD; }
 und()  { undo; }
 
-# ninja = auto snapshot + Codex CLI edit
+# nin = auto snapshot + Codex CLI edit
 ninja() {
   file=$1
   shift
@@ -14,7 +14,7 @@ ninja() {
   fi
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
-  # Run codex with prompt first, then file path
-  codex --diff "$@" < "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+  # Codex CLI: prompt first, then file
+  codex "$@" --file "$file" --diff
 }
 nin() { ninja "$@"; }
