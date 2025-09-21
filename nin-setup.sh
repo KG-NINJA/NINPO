@@ -4,17 +4,17 @@ undo() { git reset --hard HEAD; }
 und()  { undo; }
 
 ninja() {
-  prompt=$1
-  file=$2
-  if [ -z "$prompt" ] || [ -z "$file" ]; then
-    echo "Usage: nin \"<prompt>\" <file>"
+  file=$1
+  shift
+  if [ -z "$file" ]; then
+    echo "Usage: nin <file> \"<prompt>\""
     return 1
   fi
-  shift 2
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
 
-  # ファイル内容を Codex に食わせて出力を上書き
+  # ファイル内容を codex に渡し、出力で上書き
+  prompt="$*"
   tmpfile=$(mktemp)
   cat "$file" | codex "$prompt" > "$tmpfile" && mv "$tmpfile" "$file"
 }
