@@ -6,7 +6,7 @@ https://buymeacoffee.com/kgninja
 ## Installation
 
 ```bash
-curl -s https://raw.githubusercontent.com/YOURNAME/ninpo/main/nin-setup.sh -o ~/nin-setup.sh
+curl -s https://raw.githubusercontent.com/KG-NINJA/ninpo/main/nin-setup.sh -o ~/nin-setup.sh
 echo "source ~/nin-setup.sh" >> ~/.bashrc
 source ~/.bashrc
 Usage
@@ -29,4 +29,3 @@ Each nin command makes a Git commit named snapshot before nin edit.
 Use und to reset to the last snapshot instantly.
 
 For cleanup, squash snapshot commits with git rebase -i if needed.
-
