@@ -14,7 +14,7 @@ ninja() {
   fi
   git add .
   git commit -m "snapshot before nin edit" >/dev/null 2>&1
-  # Codex CLI: prompt first, then file
+  # correct codex call: first prompt, then --file
   codex "$@" --file "$file" --diff
 }
 nin() { ninja "$@"; }
